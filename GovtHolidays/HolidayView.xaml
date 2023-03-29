@@ -1,0 +1,42 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GovtHolidays.HolidayView"
+             xmlns:local="clr-namespace:GovtHolidays">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label 
+            Text="Government Holidays-2023!"
+            TextColor="Red"
+            FontAttributes="Bold"
+            FontSize="25"
+            Padding="10"
+            Grid.Row="0"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <CollectionView x:Name="HolidayCollectionView"
+                        Margin="30"
+                        BackgroundColor="OldLace"
+                        Grid.Row="1"
+                        SelectionMode="None"
+                        VerticalScrollBarVisibility="Always">
+        <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="{Binding date}" TextColor="DarkBlue" Grid.Row="0" FontSize="15" FontAttributes="Bold"  FontFamily="Times New Roman"/>
+                        <Label Text="{Binding event}" TextColor="DarkRed" Grid.Row="1" FontSize="15" FontAttributes="Bold"  FontFamily="Times New Roman"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+        </CollectionView>
+    </Grid>
+</ContentPage>
