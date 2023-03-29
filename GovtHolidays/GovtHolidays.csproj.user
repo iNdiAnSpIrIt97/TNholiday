@@ -10,7 +10,16 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-android|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="App.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="AppShell.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="HolidayView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

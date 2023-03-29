@@ -66,6 +66,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="App.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AppShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="HolidayView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
